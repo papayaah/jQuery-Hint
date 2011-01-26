@@ -1,0 +1,52 @@
+h1. jQuery Hint
+
+Originally written by Remy Sharp - http://remysharp.com/2007/01/25/jquery-tutorial-text-box-hints/
+
+I improved on it a little bit by adding optional settings and resetting the styles of the input box to its original style when user starts to enter text.
+
+Also now lives in Github so people can fork :)
+
+<pre>
+  You will see a lot of web sites with search boxes have text already populated inside of the field and when you select the input text box it disappears and reappears when it’s not selected.  
+</pre>
+
+h2. To use:
+
+<pre>
+<script type="text/javascript" src="jquery.hint-1.1.js"></script>
+</pre>
+
+And modify all input text fields with title attribute
+
+<pre>
+  $("input[title!='']").hint();
+</pre>
+
+You could of course apply it to specific input text field:
+
+<pre>
+   $("input#username").hint();
+</pre>
+
+h2. The following are the possible options:
+
+color - color of the hint text (defaults to "gray")
+fontStyle - font style of the hint text (defaults to "italic")
+blurClass - class name to apply when the input text field hint is showing up (defaults to "blur")
+
+Eg,
+
+<pre>
+    $("input[title!='']").hint({ color: 'blue', fontStyle: 'normal'});
+</pre>
+
+If you want to set these options only once, override it after the plugin has loaded like so:
+<pre>
+$.fn.hint.color = "blue";
+$.fn.hint.fontStyle = "normal";
+</pre>
+
+And each call will use these properties unless override through the option parameters.
+
+
+

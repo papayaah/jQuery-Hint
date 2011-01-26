@@ -1,0 +1,81 @@
+<html>
+<head>
+  <link type="text/css" href="jquery.notifications.css" media="screen" rel="stylesheet" />
+  <style>
+    div#container {
+      width: 950px;
+      margin: 0 auto;
+      font-size: 18px;
+      margin-top: 50px;      
+    }
+    input {
+      font-size: 18px;
+      padding: 5px;
+    }
+    input#demo2 {
+      color: blue;
+    }
+    pre#code {
+      display:none;
+    }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.hint-1.1.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("div#demo1 input[title!='']").hint();
+      $("input#demo2").hint({color:'green'});  
+    })
+  </script>
+
+</head>
+<body>    
+  <div id="container">
+    <h1>jQuery Hint Plugin Demo</h1>
+    <p>Originally written by Remy Sharp - http://remysharp.com/2007/01/25/jquery-tutorial-text-box-hints/</p>
+
+    <p>I improved on it a little bit by adding optional settings and resetting the styles of the input box to its original style when user starts to enter text.</p>
+
+    <p>Also now lives in Github so people can fork :)</p>
+    
+    <div id="demo1">      
+      <h3>Demo 1</h3>
+      <p>Watch it disappear:</p>
+      <input type="input" title="Enter your username" />
+      <code>
+          $("div#demo1 input[title!='']").hint();
+      </code>
+    </div>
+    
+    <h3>Demo 2</h3>
+    <p>With options:</p>
+    <input type="input" id="demo2" title="Enter your username" />
+    <code>
+      $("input#demo2").hint({color:'green'});  
+    </code>
+      
+  <pre id="code">
+    function showNotice() {
+      $.n("This is a notice message");
+    }
+    function showError() {
+      $.n.error("This is an error message. It won't go away you have to click the x button.");
+    }
+    function showWarning() {
+      $.n.warning("This is a warning message");
+    }    
+    function showWithOptions() {
+      $.n("This message has options.", {    
+        type: "notice",
+  			timeout: 5000,
+  			stick: true,
+  			fadeSpeed : 1500,
+  			close : "close me",
+  			effect : "slide"})
+    }
+  </pre>
+  </div>
+  
+</body>
+  
+  
