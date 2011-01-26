@@ -6,8 +6,11 @@ I improved on it a little bit by adding optional settings and resetting the styl
 
 Also now lives in Github so people can fork :)
 
+!http://img843.imageshack.us/img843/903/jqueryhintdemo.png!
+
 <pre>
-  You will see a lot of web sites with search boxes have text already populated inside of the field and when you select the input text box it disappears and reappears when it’s not selected.  
+  You will see a lot of web sites with search boxes have text already populated inside 
+  of the field and when you select the input text box it disappears and reappears when it’s not selected.  
 </pre>
 
 h2. To use:
