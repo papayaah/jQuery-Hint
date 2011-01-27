@@ -15,6 +15,12 @@ h2. Screenshot of the demo
 
 !http://img843.imageshack.us/img843/903/jqueryhintdemo.png!
 
+h2. Changes:
+
+* January 27, 2011 - Added 2 options:
+*# retain - if the hint should stay or not when the input field is in focus, defaults to true
+*# resetCursorPos - should the cursor move to the start of the input field on focus or not, defaults to true
+
 h2. To use:
 
 <pre>

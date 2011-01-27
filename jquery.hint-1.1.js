@@ -44,13 +44,41 @@
 		  origColor = $input.css('color');		
 
 	      // on blur, set value to title attr if text is blank
-	      $input.blur(function () {
-	        if (this.value === '') {
-	          $input.val(title).addClass(settings.blurClass);
-			  $input.css('fontStyle', settings.fontStyle);
-			  $input.css('color', settings.color);
-	        }
-	      }).focus(remove).blur(); // now change all inputs to title
+	      	$input.blur(function () {
+		        if (this.value === '') {
+		          $input.val(title).addClass(settings.blurClass);
+				  $input.css('fontStyle', settings.fontStyle);
+				  $input.css('color', settings.color);
+		        }
+	       }).blur(); // now change all inputs to title
+	
+			$input.focus(function() {
+
+				if(settings.resetCursorPos) {
+					// check if IE
+					if( $input.get(0).createTextRange ) {
+						var range = $(this).get(0).createTextRange();					
+						range.collapse(true); 
+						range.moveStart("character", 0); 
+					} else {
+						// all other browsers
+						$input.get(0).setSelectionRange(0, 0); 	
+					}	
+				}		
+
+				if(!settings.retain) {
+					remove();
+				}
+			});
+			
+		  if(settings.retain) {
+		    $input.keydown(function() {
+				if (this.value === title) {
+					remove();
+				}
+	     	});
+		  }
+
 
 	      // clear the pre-defined text when form is submitted
 	      $form.submit(remove);
@@ -62,7 +90,9 @@
 	$.fn.hint.defaults = {
         color: 'gray',
 		fontStyle: 'italic',
-		blurClass: 'blur'
+		blurClass: 'blur',
+		retain: true,
+		resetCursorPos: true
      };	
 	
 })(jQuery);

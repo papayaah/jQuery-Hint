@@ -24,7 +24,7 @@
   <script type="text/javascript">
     $(function(){
       $("div#demo1 input[title!='']").hint();
-      $("input#demo2").hint({color:'green'});  
+      $("input#demo2").hint({color:'green', resetCursorPos: false});  
     })
   </script>
 
@@ -51,7 +51,7 @@
     <p>With options:</p>
     <input type="input" id="demo2" title="Enter your username" />
     <code>
-      $("input#demo2").hint({color:'green'});  
+      $("input#demo2").hint({color:'green', resetCursorPos: false});  
     </code>
       
   <pre id="code">
