@@ -17,7 +17,7 @@ h2. Screenshot of the demo
 
 h2. Changes:
 
-* January 27, 2011 - Added 2 options:
+* January 27, 2011 v1.2 - Added 2 options:
 *# retain - if the hint should stay or not when the input field is in focus, defaults to true
 *# resetCursorPos - should the cursor move to the start of the input field on focus or not, defaults to true
 
