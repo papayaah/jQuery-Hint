@@ -11,6 +11,9 @@ Also now lives in Github so people can fork :)
   of the field and when you select the input text box it disappears and reappears when it’s not selected.  
 </pre>
 
+h2. Known issues
+* resetCursorPos does not work on IE- at least on IE 8. If someone can fix that and send a patch please do. Search for createTextRange on the source. No worries the current version does not create any JS error on the browser.
+
 h2. Screenshot of the demo
 
 !http://img843.imageshack.us/img843/903/jqueryhintdemo.png!
